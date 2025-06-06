@@ -7,7 +7,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Leer archivo CSV y mostrar los puntos
-Papa.parse("estaciones.csv.csv", {
+Papa.parse("estaciones.csv", {
   download: true,
   header: true,
   complete: function(results) {
@@ -22,8 +22,5 @@ Papa.parse("estaciones.csv.csv", {
           );
       }
     });
-
-    // Si quieres agregar un gráfico:
-    // generarGrafico(data);
   }
 });
